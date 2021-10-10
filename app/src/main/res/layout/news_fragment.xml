@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/base_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".presentation.news.NewsFragment">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/ed_search"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="@dimen/_25dp"
+        android:layout_marginTop="@dimen/_25dp"
+        android:background="@drawable/bg_search"
+        android:drawableStart="@drawable/ic_search_24"
+        android:drawablePadding="@dimen/_10dp"
+        android:hint="@string/search"
+        android:imeOptions="actionSearch"
+        android:inputType="textEmailAddress"
+        android:textColor="?attr/colorPrimary"
+        android:textColorHint="@color/black50"
+        android:textSize="@dimen/_16sp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_news"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_0dp"
+        android:layout_marginHorizontal="@dimen/_25dp"
+        android:layout_marginTop="@dimen/_25dp"
+        android:visibility="gone"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ed_search"
+        tools:listitem="@layout/item_news" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_first_msg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="@string/please_write_your_search_word"
+        android:textColor="?attr/colorPrimary"
+        android:textSize="@dimen/_20sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="@string/no_data_for_search_word"
+        android:textColor="?attr/colorPrimary"
+        android:textSize="@dimen/_20sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+</androidx.constraintlayout.widget.ConstraintLayout>

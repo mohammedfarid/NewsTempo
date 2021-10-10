@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">NewsTempo</string>
+    <string name="loading">Loading...</string>
+    <string name="news">News</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="search">Search</string>
+    <string name="please_write_your_search_word">Please Write Your Search Word</string>
+    <string name="no_data_for_search_word">No Result For Your Search</string>
+    <string name="by">By</string>
+    <string name="more_content">More Content</string>
+</resources>
